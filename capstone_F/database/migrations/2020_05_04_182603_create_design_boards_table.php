@@ -20,7 +20,7 @@ class CreateDesignBoardsTable extends Migration
             $table->text('content');
             $table->text('subcontent');
             $table->dateTime('date');
-            $table->text('vector');
+            $table->text('vector')->nullable();
             $table->timestamp('created_at')->nullable();
             $table->timestamp('updated_at')->nullable();
             $table->date('deleted_at')->nullable();

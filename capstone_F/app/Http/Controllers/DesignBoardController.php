@@ -42,7 +42,7 @@ class DesignBoardController extends Controller
              'title' => $title,
              'content' => $content,
              'subcontent' => $sub_content,
-             'date' => $created_at
+             'date' => $created_at,
              ];
        
            if($designimages = DB::table('design_boards')->max('id'))
@@ -84,7 +84,8 @@ class DesignBoardController extends Controller
     public function design_read(Design_Board $d_page)
     {
         //------------------------------ update ----------------------------------
-        $d_boards = design_board::all();
+        $d_boards = design_board::all()->whereNull('deleted_at');
+        
         return view('design_read',['d_page' => $d_page,'d_boards' => $d_boards]);
         //------------------------------------------------------------------------
     }

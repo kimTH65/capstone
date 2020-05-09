@@ -114,8 +114,8 @@ $rank = calc($d_page,$d_boards);
         <?php 
         for($i = 0 ; $i<count($rank) ; $i++){
         ?>
-        <a href = "{{ route('design_read', ['d_page' => $rank[$i]+1]) }}">
-            <img class="jumbotron" src="/design_image/<?php echo $rank[$i]+1?>/main_image.jpg" alt="..."style = "width:300px;"   >
+        <a href = "{{ route('design_read', ['d_page' => $rank[$i]]) }}">
+            <img class="jumbotron" src="/design_image/<?php echo $rank[$i]?>/main_image.jpg" alt="..."style = "width:300px;"   >
         </a>
         <?php 
         }
@@ -262,7 +262,16 @@ function calc($no,$db){
         $rank= array();
         $rank_max= 3; 
         $rank_count=0;
-
+        $id = array();
+        $id_count=0;
+        
+        foreach ($sql2 as $sql){
+            
+                $id[$id_count] = $sql->id;
+            
+            $id_count++;
+        }
+        
         foreach ($sql2 as $sql){
             $other[$vector_count] = $sql->vector;
             if($sql->id == $no->id)
@@ -275,7 +284,7 @@ function calc($no,$db){
         for($i = 0; $i<count($other); $i++)
         {
             $score_count= 0;
-            if($i!=$no->id-1)
+            if($id[$i]!=$no->id)
             {
                 for($j = 0; $j<count($other); $j++)
                 {
@@ -286,22 +295,22 @@ function calc($no,$db){
                         if($sim_Sel>$sim_Oth)
                         {
                             $score_count++;
-                            $recomend[$i] = $i;
                         }
                     } 
                 }
-                $recomend[$i] = $score_count++;
+                $recomend[$i] = $score_count;
             }else{
-                $recomend[$i]=$rank_max+1;
+                $recomend[$i]=10000;
             }
         }
-
+        
+        
         for($e=0;$e<=$rank_max;$e++){
 
             for($k=0;$k<count($recomend);$k++)
             {
                 if($recomend[$k]==$e){
-                    $rank[$rank_count]=$k;
+                    $rank[$rank_count]=$id[$k];
                     $rank_count++;
                 }
                 if(count($rank)>=$rank_max)
@@ -310,6 +319,8 @@ function calc($no,$db){
                 }
             }
         }
+        
+        
         return $rank;
     }
 
@@ -341,7 +352,7 @@ function calc($no,$db){
 
         $result = $mult/($sqrt_1*$sqrt_2);
 
-        return print($result);
+        return $result;
     }
 
 
