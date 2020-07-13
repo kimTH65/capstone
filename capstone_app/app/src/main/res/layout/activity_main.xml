@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f5f5dc">
+
+    <androidx.appcompat.widget.Toolbar
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <TextView
+            android:id="@+id/tooltext2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textSize="20dp"
+            android:text="Photography"
+
+            >
+
+        </TextView>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginTop="50dp"
+       >
+
+
+        <!-- 명함인식 -->
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:layout_marginBottom="10dp"
+                android:weightSum="2"
+                android:layout_gravity="center">
+
+                <Button
+                    android:id="@+id/camera_button"
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_background2"
+                    android:textSize="15dp"
+                    android:textColor="@android:color/white"
+                    android:gravity="center"
+                    android:text="사진찍기" />
+
+                <Button
+                    android:id="@+id/btn_album"
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_background2"
+                    android:textSize="15dp"
+                    android:textColor="@android:color/white"
+                    android:gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:text="앨범" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:layout_marginBottom="30dp"
+                android:weightSum="3"
+                android:layout_gravity="center">
+
+
+                <Button
+                    android:onClick="cutImage"
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_background2"
+                    android:textSize="15dp"
+                    android:textColor="@android:color/white"
+                    android:gravity="center"
+                    android:text="자동" />
+
+                <Button
+                    android:onClick="processImage"
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_background2"
+                    android:textSize="15dp"
+                    android:textColor="@android:color/white"
+                    android:gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:text="인식하기" />
+
+                <Button
+                    android:id="@+id/croppImage"
+                    android:onClick="croppImage"
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_background2"
+                    android:textSize="15dp"
+                    android:textColor="@android:color/white"
+                    android:gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:text="사진자르기" />
+
+            </LinearLayout>
+
+
+
+            <ImageView
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:scaleType="fitXY"
+                android:id="@+id/imageview"
+                android:layout_width="match_parent"
+                android:layout_height="750px"
+                android:src="@drawable/test"
+                android:layout_marginBottom="10dp"/>
+
+            <TextView
+                android:id="@+id/tv_result"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:text="인식 결과가 출력됩니다."
+                android:textColor="#990000"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/messageText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:textStyle="bold"
+                android:background="#fff"
+                android:text=""
+                android:textColor="#990000"
+                android:textSize="20dp" />
+
+
+            <Button
+                android:id="@+id/address"
+                android:onClick="nextView"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:textSize="20dp"
+                android:background="@drawable/btn_background"
+                android:gravity="center"
+                android:textColor="@android:color/white"
+                android:layout_margin="40dp"
+                android:text="저장된 내용 보기" />
+
+        </LinearLayout>
+
+
+    </ScrollView>
+</RelativeLayout>

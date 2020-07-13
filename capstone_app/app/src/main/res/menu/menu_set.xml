@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".First">
+
+    <item
+        android:id="@+id/set1"
+        app:showAsAction="never"
+        android:enabled="true"
+        android:checked="true"
+        android:title="웹사이트"
+        />
+
+    <item
+        android:id="@+id/set2"
+        app:showAsAction="never"
+        android:enabled="true"
+        android:checked="true"
+        android:title="개발자" />
+
+    <item
+        android:id="@+id/set3"
+        app:showAsAction="never"
+        android:enabled="true"
+        android:checked="true"
+        android:title="로그아웃" />
+
+</menu>

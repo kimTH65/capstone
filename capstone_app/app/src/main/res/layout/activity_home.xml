@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/imagescroll"
+    android:layout_height="fill_parent"
+    android:layout_width="fill_parent"
+    android:layout_marginTop="55dp"
+    android:background="@drawable/backblue">
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="center_horizontal"
+        android:paddingRight="5px" >
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:scaleType="center"
+            android:src="@drawable/mainimg"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginTop="10dp"
+            android:layout_centerInParent="true"
+            android:background="#FFFFFF"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="40dp"
+            android:layout_marginTop="40dp"
+            android:layout_alignParentLeft="true"
+            android:textColor="#FFFFFF"
+            android:text = "君の名刺は"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30dp"
+            android:layout_marginTop="5dp"
+            android:layout_alignParentLeft="true"
+            android:text = "무엇을 제공 하는가."
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_alignParentLeft="true"
+            android:text = "연락처를 직접 제작 할 수 있습니다."
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_alignParentLeft="true"
+            android:text = "연락처를 간편하게 관리 할 수 있습니다."
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_alignParentLeft="true"
+            android:text = "연락처를 의뢰, 거래 할 수 있습니다."
+            android:textStyle="bold"
+            />
+
+        <ImageView
+            android:id="@+id/image2"
+            android:layout_width="wrap_content"
+            android:layout_height="400dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/dd" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginTop="10dp"
+            android:layout_centerInParent="true"
+            android:background="#FFFFFF"/>
+
+        <ImageView
+            android:id="@+id/image3"
+            android:layout_marginTop="10dp"
+            android:layout_width="350dp"
+            android:layout_height="270dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ff" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30dp"
+            android:layout_marginTop="5dp"
+            android:textColor="#FFFFFF"
+            android:layout_alignParentLeft="true"
+            android:text = "연락처 제작하기"
+            android:textStyle="bold"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:layout_marginTop="5dp"
+            android:layout_alignParentLeft="true"
+            android:text = "자신을 소개 할 수 있는 연락처를
+직접 만들어 보세요."
+            android:textStyle="bold"
+            />
+
+        <ImageView
+            android:id="@+id/image4"
+            android:layout_marginTop="10dp"
+            android:layout_width="350dp"
+            android:layout_height="270dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ggg" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30dp"
+            android:layout_marginTop="5dp"
+            android:textColor="#FFFFFF"
+            android:layout_alignParentLeft="true"
+            android:text = "연락처 관리"
+            android:textStyle="bold"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:layout_marginTop="5dp"
+            android:layout_alignParentLeft="true"
+            android:text = "자신의 연락처, 혹은 타인의 연락처를
+간편하게 관리 할 수 있습니다."
+            android:textStyle="bold"
+            />
+
+        <ImageView
+            android:id="@+id/image5"
+            android:layout_marginTop="10dp"
+            android:layout_width="350dp"
+            android:layout_height="270dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/de" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30dp"
+            android:layout_marginTop="5dp"
+            android:textColor="#FFFFFF"
+            android:layout_alignParentLeft="true"
+            android:text = "디자인 요청"
+            android:textStyle="bold"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:layout_marginTop="5dp"
+            android:layout_alignParentLeft="true"
+            android:text = "연락처의 제작이 어려우시면
+디자이너에게 요청을 해보세요."
+            android:textStyle="bold"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginTop="10dp"
+            android:layout_centerInParent="true"
+            android:background="#FFFFFF"/>
+
+
+
+
+
+
+
+    </LinearLayout>
+</ScrollView>

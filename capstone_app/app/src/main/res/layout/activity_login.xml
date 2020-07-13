@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backblue">
+
+    <TextView
+        android:id = "@+id/mainText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:textSize="40dp"
+        android:layout_marginTop="40dp"
+        android:textColor="#ffffff"
+        android:text = "君の名刺は"
+        android:textStyle="bold"/>
+
+    <ImageView
+
+        android:id="@+id/mainImage"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/mainText"
+        android:layout_height="150dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:src="@drawable/business2" />
+
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="50dp"
+        android:paddingTop="200dp" >
+
+
+        <EditText
+            android:id="@+id/editText_id"
+            android:layout_width="match_parent"
+            android:layout_marginTop="60dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="4dp"
+            android:ems="20"
+            android:padding="10dp"
+            android:textColor="#ffffff"
+            android:textColorHint="#ffffff"
+            android:hint="아이디"
+            android:drawableStart="@drawable/ic_person_black_24dp"
+            android:drawableLeft = "@drawable/ic_person_black_24dp"
+            android:background="@color/colorPrimary"/>
+
+
+        <EditText
+            android:id="@+id/editText_pw"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="4dp"
+            android:padding="10dp"
+            android:layout_below="@+id/editText_id"
+            android:ems="20"
+            android:layout_marginTop="10dp"
+            android:textColor="#ffffff"
+            android:textColorHint="#ffffff"
+            android:inputType="textPassword"
+            android:hint="비밀번호"
+            android:drawableStart="@drawable/ic_lock_black_24dp"
+            android:drawableLeft = "@drawable/ic_lock_black_24dp"
+            android:background="@color/colorPrimary"/>
+
+
+        <Button
+            android:id="@+id/login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:textColor="#ffffff"
+            android:textSize="20dp"
+            android:background="@color/colorPrimaryDark"
+            android:layout_below="@+id/editText_pw"
+            android:gravity="center"
+            android:text="로그인"
+            android:onClick="bt_Login"/>
+
+        <Button
+            android:id="@+id/join"
+            android:layout_below="@id/login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:textSize="20dp"
+            android:background="#ffffff"
+            android:gravity="center"
+            android:text="회원가입"
+            android:onClick="bt_Join"/>
+
+
+        <TextView
+            android:id = "@+id/bottomtext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:textSize="20dp"
+            android:layout_below="@+id/join"
+            android:layout_marginTop="40dp"
+            android:textColor="#ffffff"
+            android:textStyle="bold"
+            android:text = "君の名刺は CapstoneProject"/>
+        <TextView
+            android:id = "@+id/bottomtext2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:textSize="12dp"
+            android:layout_below="@+id/bottomtext"
+            android:layout_marginTop="10dp"
+            android:textColor="#ffffff"
+            android:textStyle="bold"
+            android:text = "by 김재욱 오종현 김태훈"/>
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

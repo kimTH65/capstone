@@ -1,0 +1,44 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+class CreateImageTemplateTablesTable extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        Schema::create('image_template_tables', function (Blueprint $table) {
+            $table->char('user_id',30);
+            $table->char('template_title',30)->nullable();
+            $table->char('template_title_text',50)->nullable();
+            $table->char('template_title_small',50)->nullable();
+            $table->char('template_intro_text',50)->nullable();
+            $table->mediumText('template_memo_text')->nullable();
+           $table->char('template_tel',50)->nullable();
+            $table->char('template_email',50)->nullable();
+            $table->char('template_fax',50)->nullable();
+            $table->char('template_info_title',50)->nullable();
+            $table->mediumText('template_info_text')->nullable();
+            $table->char('template_location',30)->nullable();
+            
+            $table->timestamp('created_at')->nullable();
+            $table->timestamp('updated_at')->nullable();
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::dropIfExists('image_template_tables');
+    }
+}
